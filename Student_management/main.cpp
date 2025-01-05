@@ -1,16 +1,5 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <unordered_map>
-#include <algorithm>
-#include <iomanip>
-#include <openssl/sha.h> // For password hashing
-#include <openssl/evp.h>   // For EVP (more modern approach)
-#include <openssl/sha.h>   // For older SHA functions
-#include <termios.h>
-#include <unistd.h>
-
+#include <bits/stdc++.h>
+using namespace std;
 
 
 using namespace std;
@@ -42,17 +31,17 @@ unordered_map<string, string> roles;
 unordered_map<string, string> names;
 
 // Utility function to hash a password
-string hashPassword(const string &password)
-{
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256((unsigned char *)password.c_str(), password.size(), hash);
-    stringstream ss;
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
-    {
-        ss << hex << setw(2) << setfill('0') << (int)hash[i];
-    }
-    return ss.str();
-}
+// string hashPassword(const string &password)
+// {
+//     unsigned char hash[SHA256_DIGEST_LENGTH];
+//     SHA256((unsigned char *)password.c_str(), password.size(), hash);
+//     stringstream ss;
+//     for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
+//     {
+//         ss << hex << setw(2) << setfill('0') << (int)hash[i];
+//     }
+//     return ss.str();
+// }
 
 void newLine()
 {
@@ -138,7 +127,8 @@ void addStudent()
     string password;
     cout << "\t\t\tEnter Password: ";
     getline(cin, password);
-    s.hashedPassword = hashPassword(password);
+    s.hashedPassword = password;
+    // s.hashedPassword = hashPassword(password);
     cout << "\t\t\tEnter Section: ";
     getline(cin, s.section);
     cout << "\t\t\tEnter CGPA: ";
