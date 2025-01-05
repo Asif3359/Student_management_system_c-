@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1736083060 source:/home/asif-ahammed/Project/c++_Projects/St_Mnt/Student_management/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<unordered_map>
+	<algorithm>
+	<iomanip>
+	<openssl/sha.h>
+	<openssl/evp.h>
+	<openssl/sha.h>
+	<termios.h>
+	<unistd.h>
+
+1736083729 source:/home/asif-ahammed/Project/c++_Projects/Student_management/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<unordered_map>
+	<algorithm>
+	<iomanip>
+	<openssl/sha.h>
+	<openssl/evp.h>
+	<openssl/sha.h>
+	<termios.h>
+	<unistd.h>
+
